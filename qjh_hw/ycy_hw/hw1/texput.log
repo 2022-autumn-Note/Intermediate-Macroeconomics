@@ -1,0 +1,22 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.7.6)  28 SEP 2020 19:46
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**c:/Users/YcY/Desktop/SJTU/大二上\中宏/hw/hw1/hw1.tex
+
+! Emergency stop.
+<*> ...esktop/SJTU/大二上\中宏/hw/hw1/hw1.tex
+                                                  
+*** (job aborted, file error in nonstop mode)
+
+ 
+Here is how much of TeX's memory you used:
+ 5 strings out of 480608
+ 253 string characters out of 5907537
+ 239604 words of memory out of 5000000
+ 15998 multiletter control sequences out of 15000+600000
+ 532338 words of font info for 24 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 1i,0n,0p,1b,6s stack positions out of 5000i,500n,10000p,200000b,80000s
+!  ==> Fatal error occurred, no output PDF file produced!

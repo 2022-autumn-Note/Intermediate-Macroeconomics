@@ -1,0 +1,79 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{color}
+\usepackage{geometry}
+
+\renewcommand{\thesection}{\arabic{section}.}
+\renewcommand{\thesubsection}{(\arabic{subsection}).}
+
+\geometry{top=3cm, bottom=3cm}
+\pagestyle{empty}
+
+\begin{document}
+\section{}
+If the PPP holds,
+\[
+    \varepsilon = e \frac{P}{P^\ast} = 1
+    \;\Longrightarrow\;
+    e = \frac{P^\ast}{P}.
+\]
+Employing the formula, we can solve the Price and the Predicted column. However, for the actual exchange rate, it lacks the information about the real exchange rate.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+    \hline
+    \multirow{2}*{Country} & \multirow{2}*{Currency} & \multirow{2}*{Big-Mac Price} & \multicolumn{2}{c|}{Exchange rate (per US dollar)} \\
+    \cline{4-5}
+     &  &  & Predicted (PPP) & Actual \\
+    \hline
+    USA & Dollar & 5 & \color{blue}1 & \color{blue}1 \\
+    \hline
+    China & Yuan & 20 & \color{blue}4 & 7 \\
+    \hline
+    Japan & Yen & \color{blue}375 & 75 & 100 \\
+    \hline
+    UK & Pound & 4 & 0.8 & \color{blue}? \\
+    \hline
+\end{tabular}
+\end{table}
+
+\section{}
+\subsection{}
+As $Y$, $T$ and $r$ are exogenous variables, we firstly compute
+\begin{align*}
+    C &= 1000 + \frac{3}{4} (Y-T) = 6400, \\
+    I &= 1200 - 100 r^\ast = 700.
+\end{align*} 
+Then we have
+\begin{align*}
+    S &= Y - C - G = 600, \\
+    \text{Excess Savings} &= S - I = -100, \\
+    X &= \text{Excess Savings} = -100.
+\end{align*}
+
+\subsection{}
+To achieve the equilibrium, 
+\[
+    500 - 200 \varepsilon = X(\varepsilon) = \text{Excess Savings}
+    \;\Longrightarrow\;
+    \varepsilon = 3.
+\]
+
+\subsection{}
+With $G$ rising to 1200 and $Y$ and $T$ unchanged, 
+\begin{align*}
+    S_{ng} &= Y - C - T = 800, \\
+    S & = Y - C - G = 400, \\
+    \text{Excess Savings} &= S - I = -300, \\
+    X &= \text{Excess Savings} = -300.
+\end{align*}
+Again, we can compute that
+\[
+    500 - 200 \varepsilon = X(\varepsilon) = \text{Excess Savings}
+    \;\Longrightarrow\;
+    \varepsilon = 4.
+\]
+\end{document}

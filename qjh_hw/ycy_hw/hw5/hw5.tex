@@ -1,0 +1,90 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{geometry}
+\usepackage{commath}
+
+\pagestyle{empty}
+\geometry{top=3cm, bottom=3cm}
+
+\newcommand{\kast}{k^\ast}
+\newcommand{\yast}{y^\ast}
+\newcommand{\cast}{c^\ast}
+\renewcommand{\thesection}{\arabic{section}.}
+\renewcommand{\thesubsection}{(\arabic{subsection}).}
+
+\begin{document}
+\section{}
+Apply the equilibrium condition
+\begin{align}
+    S &= I(r) + F(r) \label{e1} \\
+    X(\varepsilon) &= F(r) \label{e2}
+\end{align}
+and analyze with the $\varepsilon - r$ figure.
+
+\subsection{}
+A business-friendly party taking power means the national saving will decrease. To satisfy \eqref{e1}, $r$ has to increase. Then $\varepsilon$ increases, according to \eqref{e2}. To conclude, both the real interest rate and the real exchange rate will increase.
+
+\subsection{}
+Increasing tariffs on goods from a major trading partner results in that for any given $\varepsilon$, $X(\varepsilon)$ increases. To satisfy \eqref{e2}, $r$ has to decreases. That is, the curve of $X(\varepsilon) = F(r)$ shifts to the left. Since there is nothing to do with the vertical curve of $S = I(r) + F(r)$, the result is a higher real exchange rate and an unchanged real interest rate.
+
+\subsection{}
+Country's going to war leads to a higher government expenditure, decreasing the national saving $S$. To satisfy \eqref{e1}, $r$ has to rise. According to \eqref{e2}, $\varepsilon$ rises as well. In conclusion, going to war results in both higher real interest rate and real exchange rate. 
+
+\renewcommand{\thesubsection}{(\alph{subsection}).}
+
+\section{}
+\subsection{}
+Using the constant return-to-scale assumption, define the per capita production function
+\[
+    f(k) \equiv y = \frac{Y}{L} = \left( \frac{K}{L} \right)^\alpha = k^\alpha.
+\]
+When the economy reaches the steady state, we have
+\[
+    \dot{k} = \frac{\dif k}{\dif t} \bigg|_{k = \kast} 
+    = s f(\kast) - (n + \delta) \kast = s {\kast}^\alpha - (n + \delta) \kast = 0
+    \,\Longrightarrow\,
+    \kast = \left(\frac{n + \delta}{s}\right)^{\frac{1}{\alpha - 1}}.
+\]
+Thus, we can also compute that
+\begin{align*}
+    \yast &= {\kast}^\alpha = \left(\frac{n + \delta}{s}\right)^{\frac{\alpha}{\alpha - 1}}, \\
+    \cast &= \yast - i^\ast = (1 - s) \yast = 
+    (1 - s) \left(\frac{n + \delta}{s}\right)^{\frac{\alpha}{\alpha - 1}}.
+\end{align*}
+
+\subsection{}
+To maximize the consumption, take the derivative of $\cast = \yast - s \yast = f(\kast) - (n + \delta) \kast$,
+\[
+    \frac{\dif \cast}{\dif \kast}
+    = f'(\kast) - (n + \delta)
+    = \alpha {\kast}^{\alpha - 1} - (n + \delta).
+\]
+Apply the first-order condition, 
+\[
+    \frac{\dif \cast}{\dif \kast} \bigg|_{\kast = \kast_g} = 0
+    \,\Longrightarrow\,
+    \kast_g = \left(\frac{n + \delta}{\alpha}\right)^{\frac{1}{\alpha - 1}},
+\]
+which is the golden-rule level for $\kast$.
+
+\subsection{}
+To find the the golden-rule saving rate, just let $\kast = \kast_g$ and solve it. Since $\partial \kast / \partial s > 0$,
+\[
+    s^\ast_g = \alpha.
+\]
+
+\section{}
+Since $h$ is differentiable and $\kast$ is a stable point, there exists a neighbourhood of $\kast$, denoted by $I$, in which there is only one stable point $\kast$. Forall $\epsilon > 0$ satisfying $k_1 = \kast - \epsilon \in I$ and $k_2 = \kast + \epsilon \in I$,
+\[
+    h(k_1) > 0, \qquad h(k_2) < 0.
+\]
+According to the mean value theorem, $\exists\, \xi \in (k_1, k_2)$, s.t.
+\[
+    h'(\xi) = \frac{h(k_2) - h(k_1)}{k_2 - k_1} < 0.
+\]
+Therefore,
+\[
+    h'(\kast) = \lim_{\epsilon \to 0^+} h'(\xi) < 0.
+\]
+
+\end{document}

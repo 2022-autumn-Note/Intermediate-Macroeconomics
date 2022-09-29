@@ -1,0 +1,117 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{commath}
+\usepackage{amssymb}
+
+\pagestyle{empty}
+
+\renewcommand{\thesection}{\arabic{section}.}
+\renewcommand{\thesubsection}{(\alph{subsection})}
+
+\begin{document}
+\section{}
+According to the Keynesian Cross model, $Y = C(Y - T) + I + G$. With the aggregate output a linear function of the employed people, we have
+\begin{equation}
+    \gamma N = C(\gamma N - T) + I + G.
+    \label{eq1}
+\end{equation}
+Equation \eqref{eq1} defines an implicit function $N(T,I,G)$. Using the implicit function theorem, we obtain the multiplier effect of the government expenditure on the level of employment
+\[
+    \frac{\partial N}{\partial G} =
+    -\frac{1}{\gamma C'(\gamma N - T) - \gamma} 
+    = \frac{1}{\gamma (1 - MPC)},
+\]
+in which $MPC$ is the marginal propensity to consume.
+
+\section{}
+\subsection{}
+The IS curve is given by the equation $I(r) = Y - C(Y - T) - G$. Applying the implicit function theorem, we obtain
+\[
+    \frac{\partial Y}{\partial G} = \frac{1}{1 - C'(Y-T)} = \frac{1}{1-b} > 1.
+\]
+Therefore, the IS curve shifts to the right (if $Y$ on horizontal axis and $r$ on vertical axis) by $\Delta G/(1-b)$, given a $\Delta G$ increase in $G$, since the consumption function is linear.
+
+\subsection{}
+Suppose $D$ is the intercept of the linear function $I(r)$. Plug all the expressions into the equilibrium equation and we have
+\[
+    (1 - b) \cdot Y = a + D + G - b \cdot T - (c+e) \cdot r.
+\]
+Similar to (a),
+\[
+    \frac{\partial Y}{\partial D} = \frac{1}{1-b} > 1.
+\]
+With the $D$ increases from $d$ to $2d$, the IS curve will shift to the right by $d/(1-b)$ if $Y$ on horizontal axis and $r$ on vertical axis.
+
+\newpage
+\section{}
+\subsection{}
+The IS equation and LM equation together define a system of implicit functions of $T,G,M$ and $P$. To calculate the derivative, take the total differentiation and we obtain a set of linear equations
+\[
+    \begin{pmatrix}
+        C_1 - 1 & I' + C_2 \\
+        P L_Y & P L_r
+    \end{pmatrix}
+    \begin{pmatrix}
+        \dif Y \\ \dif r
+    \end{pmatrix} =
+    \begin{pmatrix}
+        C_1 \dif T - \dif G \\ h \dif M - L \dif P
+    \end{pmatrix},
+\]
+in which $L_Y \equiv \partial L / \partial Y$, $L_r \equiv \partial L / \partial r$, $C_1 \equiv \partial C / \partial (Y-T)$, $C_2 \equiv \partial C / \partial r$. Note that under the sticky price assumption, $\dif P = 0$. Applying the Cramer's Rule, we can get
+\begin{align}
+    \dif Y &= \frac{P L_r (C_1 \dif T - \dif G) - h \dif M (I' + C_2)}{P L_r(C_1 - 1) - P L_Y (I' + C_2)}, \label{dy} \\[6pt]
+    \dif r &= \frac{h(C_1 - 1)\dif M - P L_Y (C_1 \dif T - \dif G)}{P L_r(C_1 - 1) - P L_Y (I' + C_2)}. \notag
+\end{align}
+When calculating $\partial Y / \partial G$, we fix $T$ and $M$, which means $\dif T = \dif M = 0$. Thus, the government expenditure multiplier effect is
+\begin{equation}
+    \frac{\dif Y}{\dif G} = \frac{- L_r}{L_r(C_1 - 1) - L_Y (I' + C_2)} = \frac{g}{g (1 - b) + f(e + c)} \label{dydg}
+\end{equation}    
+
+When $c = e = 0$,
+\[
+    \frac{\dif Y}{\dif G} = \frac{1}{1 - b} 
+    \geqslant \frac{g}{g (1 - b) + f(e + c)}.
+\]
+
+And when $c = 0$,
+\[
+    \frac{\dif Y}{\dif G} = \frac{g}{g (1 - b) + f \cdot e} \geqslant \frac{g}{g (1 - b) + f(e + c)}.
+\]
+
+\subsection{}
+When $h = f = 0$, the LM equation changes to $0 = L(r, h) = M_0 - g \cdot r$. Then the output has nothing to do with the money supply $M$, implying that the monetary policy can not affect the output, which is now only determined by IS equation. Since the IS equation does not change, the fiscal policy still works on the output.
+
+In the case of a monetary stimulus, fixing $G$ and $T$ in \eqref{dy} (that is, $\dif G = \dif T = 0$), we obtain that
+\begin{equation}
+    \frac{\dif Y}{\dif M} = -\frac{h (I' + C_2)}{P L_r(C_1 - 1) - P L_Y (I' + C_2)}
+    = \frac{1}{P} \cdot \frac{h (e + c)}{g (1 - b) + f (e + c)}. \label{dydm}
+\end{equation}
+When $f = h = 0$,
+\[
+    \frac{\dif Y}{\dif M} = \frac{1}{P} \cdot 0 = 0.
+\]
+Thus the monetary stimulus fails to raise the output.
+
+In the case of a fiscal stimulus, considering $\dif Y / \dif G$ having been calculated in \eqref{dydg}, we fix $G$ and $M$ in \eqref{dy} and obtain that
+\begin{equation}
+    \frac{\dif Y}{\dif T} = \frac{L_r C_1}{L_r(1 - C_1) + L_Y (I' + C_2)} = -\frac{g \cdot b}{g (1 - b) - f(e + c)}. \label{dydt}
+\end{equation}
+When $f = h = 0$,
+\begin{align*}
+    \frac{\dif Y}{\dif T} &= \frac{b}{b - 1} < 0, &
+    \frac{\dif Y}{\dif G} &= \frac{1}{1 - b} > 0.
+\end{align*}
+Thus, the fiscal stimulus raises the output.
+
+\subsection{}
+When $g = 0$, the LM equation changes to $h \cdot M / P = M_0 + f \cdot Y$. Note that if $M$ is fixed, $Y$ will be the only variable in the equation, implying that when in equilibrium, the output is fixed unless there is a monetary policy changing  $M$.
+
+Using \eqref{dydg}, \eqref{dydm} and \eqref{dydt}, we can get that, when $g = 0$,
+\begin{align*}
+    \frac{\dif Y}{\dif M} &= \frac{h}{P \cdot f} > 0, &
+    \frac{\dif Y}{\dif G} &= \frac{0}{f (e+c)} = 0, &
+    \frac{\dif Y}{\dif T} &= \frac{0}{f (e+c)} = 0.
+\end{align*}
+Therefore, the monetary stimulus raises output while the fiscal stimulus does not work.
+\end{document}

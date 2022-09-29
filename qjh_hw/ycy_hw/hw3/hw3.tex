@@ -1,0 +1,129 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{geometry}
+
+\geometry{top=3cm, bottom=3cm}
+\pagestyle{empty}
+
+\renewcommand{\thesubsection}{(\arabic{subsection})}
+
+\begin{document}
+\section{}
+\subsection{}
+\[
+    \text{MPL} = \frac{\partial F}{\partial L}
+    = (1 - \alpha) E K^\alpha L^{-\alpha}
+    = (1 - \alpha) \frac{F(K,L)}{L} .
+\]
+Similarly,
+\[
+    \text{MPK} = \frac{\partial F}{\partial K}
+    = \alpha E K^{\alpha - 1} L^{1 - \alpha}
+    = \alpha \frac{F(K,L)}{K} .
+\]
+As $0 < \alpha < 1$ and naturally $F(K, L), K, L > 0$, both MPL and MPK are positive.
+
+\subsection{}
+\begin{align*}
+    \frac{\partial^2 F}{\partial L^2}
+    &= - \alpha (1 - \alpha) E K^\alpha L^{-\alpha - 1} = - \alpha (1 - \alpha) \frac{F(K,L)}{L^2}
+    < 0, \\[6pt]
+    \frac{\partial^2 F}{\partial K^2}
+    &= \alpha (\alpha - 1) E K^{\alpha - 2} L^{1 - \alpha}
+    = - \alpha (1 - \alpha) \frac{F(K,L)}{K^2} < 0.
+\end{align*}
+Therefore, MPL is decreasing as M increases and that MPK is decreasing as L increases.
+
+\subsection{}
+For all $z > 0$ ,
+\[
+    F(zK, zL) = E (zK)^\alpha (zL)^{1 - \alpha}
+    = E z^\alpha K^\alpha z^{1 - \alpha} L^{1 - \alpha}
+    = z E K^\alpha L^{1 - \alpha} = z F(K, L).
+\]
+The constant-return-to-scale is satisfied.
+
+\section{}
+Use the assumption on the production function $F(K, L)$ that
+\[
+    F_1 \equiv \frac{\partial F}{\partial K} > 0,\ 
+    F_2 \equiv \frac{\partial F}{\partial L} > 0,\ 
+    F_{11} \equiv \frac{\partial^2 F}{\partial K^2} < 0,\ 
+    F_{22} \equiv \frac{\partial^2 F}{\partial L^2} < 0,\ 
+    F_{12} \equiv \frac{\partial^2 F}{\partial K \partial L} > 0, 
+\]
+and the classical theory of income distribution that the economy fully employs the total capital and labor and the two variables give the answer of distribution in the following way:
+\[
+    \text{Real Rental Price of Capital}
+    = \frac{R}{P} = F_1,\ 
+    \text{Real Wage}
+    = \frac{W}{P} = F_2.
+\]
+
+\subsection{}
+As part of the capital stock is damaged, the total capital $K$ decreases. Apply the assumption and the classical theory of income distribution, the real rental price of capital $R/P = F_1$ increases and the real wage $W/P = F_2$ decreases.
+
+\subsection{}
+The rise of retirement age means that the total $L$ increases. Therefore, the real rental price of capital $R/P = F_1$ increases and the real wage $W/P = F_2$ decreases.
+
+\subsection{}
+Since the inflation does not affect the total capital and total labor, both the real rental price of capital and the real wage keep the same.
+
+\subsection{}
+We can rewrite the production function as $F(K, E_t \cdot L)$ to make it labor-augmenting. In this way, to maximize the economic profit, we solve the new problem:
+\[
+    \max_{K, L}{P \cdot F(K, E_t \cdot L) - R \cdot K - W \cdot L}.
+\]
+We draw the conclution that when
+\[
+    F_1 = \frac{R}{P}\,
+    \text{ and }\,
+    E_t \cdot F_2 = \frac{W}{P},
+\]
+the maximum is achieved. That is,
+\[
+    \text{Real Rental Price of Capital}
+    = \frac{R}{P} = F_1,\ 
+    \text{Real Wage}
+    = \frac{W}{P} = E_t \cdot F_2.
+\]
+When a technological breakthrough is made, $E_t$ increases and $E_t \cdot L$ increases. Applying the assumption on production function and using the new form above, we know the real rental price of capital $R/P = F_1$ increases as $E_t \cdot L$ increases and the change of the real wage $W/P = E_t \cdot F_2$ is uncertain as $F_2$ decreases and $E_t$ increases.
+
+\subsection{}
+Similarly, if the production function is capital-augmenting and a technological breakthrough is made, the change of the real rental price of capital $R/P = E_T \cdot F_1$ is uncertain as $F_1$ decreases and $E_t$ increases and the real wage $W/P = F_2$ increases as $E_t K$ increases. 
+
+\section{}
+\subsection{}
+Plug in the $Y$ and $T$ given,
+\[
+    C = 1000 + \frac{2}{3}(Y - T) = 5000.
+\]
+Then,
+\begin{align*}
+    S_{ng} &= Y - C - T
+    = 8000 - 5000 - 2000 = 1000, \\
+    S_g &= T - G
+    = 2000 - 2500 = -500, \\
+    S &= S_{ng} + S_g = 1000 - 500 = 500.
+\end{align*}
+
+\subsection{}
+In the equilibrium,
+\[
+    1200 - 100 r = I(r) = Y - C - G = S = 500.
+\]
+Solving the equation, we have the equilibrium interest rate $r = 7$.
+
+\subsection{}
+When a balanced budget is achieved by reducing expenditure, $S_g' = 0$. Thus $G' = T = 2000$. Therefore,
+\begin{align*}
+    S'_{ng} &= Y - C - T = 1000, \\
+    S' &=  S'_{ng} + S'_g = 1000.
+\end{align*}
+Accordingly, with
+\[
+    1200 - 100 r' = I(r') = S' = 1000,
+\]
+the new equilibrium real interest rate is $r' = 2$.
+
+\end{document}
